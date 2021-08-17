@@ -264,12 +264,13 @@
   <!-- Footer -->
   <div class="footer mdui-card mdui-col-xs-12">
       <ul class="social-buttons">
-        <li><a href="https://github.com/viosey/O" target="_blank"><img src="./assets/img/footer/github.svg" alt="" width="24px" height="24px;"></a></li>
-        <li><a href="https://viosey.com/" target="_blank"><img src="./assets/img/footer/about.svg" alt="" width="24px" height="24px;"></i></a></li>
+        <li><a href="https://github.com/silently9527" target="_blank"><img src="./assets/img/footer/github.svg" alt="" width="24px" height="24px;"></a></li>
+        <li><a href="https://silently9527.cn" target="_blank"><img src="./assets/img/footer/about.svg" alt="" width="24px" height="24px;"></i></a></li>
       </ul>
 
       <p class="copyright">
-        © 2017 <a href="https://viosey.com" target="_blank">viosey</a>
+        2021©<a href="https://silently9527.cn" target="_blank">Silently9527</a>
+        <a href="https://beian.miit.gov.cn" target="_blank">蜀ICP备2020034786号-1</a>
       </p>
   </div>
 
@@ -311,8 +312,8 @@ $(document).ready(function() {
 
   // Weather
   // var cityid = 101020100;
-  var cityid = Store.getCookie('cityid');
-  var weather=$.ajax({url:"https://weather.viosey.com/myapp/weather/data/index.php%3fcityID=" + cityid, async:false});
+  // var cityid = Store.getCookie('cityid');
+  var weather=$.ajax({url:"https://widget-v3.seniverse.com/api/weather/6038b355-7b0f-4b05-b53b-f93503f4e003?unit=c&language=en&location=WX4FBXXFKE4F&geolocation=true&detected=zh-cn", async:false});
 
   var weatherJson = JSON.parse(weather.responseText);
 
