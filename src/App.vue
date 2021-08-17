@@ -264,7 +264,7 @@
   <!-- Footer -->
   <div class="footer mdui-card mdui-col-xs-12">
       <ul class="social-buttons">
-        <li><a href="https://github.com/silently9527" target="_blank"><img src="./assets/img/footer/github.svg" alt="" width="24px" height="24px;"></a></li>
+        <li><a href="https://github.com/bollnh/opage" target="_blank"><img src="./assets/img/footer/github.svg" alt="" width="24px" height="24px;"></a></li>
         <li><a href="https://silently9527.cn" target="_blank"><img src="./assets/img/footer/about.svg" alt="" width="24px" height="24px;"></i></a></li>
       </ul>
 
@@ -282,68 +282,68 @@ import Store from './store'
 import './assets/js/jquery.cxselect.min.js'
 
 // jQuery
-$(document).ready(function() {
-  $(".setCity").click(function(){
-    Store.setCookie("cityid", $(".area").val(), 365);
-  });
-  // City select
-  $.cxSelect.defaults.url = "https://qiniu.viosey.com/cityid.min.json";
-  $("#cities").cxSelect({
-    selects : ["province", "city", "area"],
-    nodata : "none",
-    jsonName : "name",
-    jsonValue : "code",
-    jsonSub : "sublist"
-  });
-
-  // Time
-  function getDate(addDayCount) {
-      var dd = new Date();
-      dd.setDate(dd.getDate()+addDayCount);// 获取 AddDayCount 天后的日期
-      var y = dd.getFullYear();
-      var m = dd.getMonth()+1;// 获取当前月份的日期
-      var d = dd.getDate();
-      return y + '/' + (m<10 ? "0" + m : m)+ '/' + (d<10 ? "0"+ d : d);
-  }
-
-  // 一言
-  // var aword=$.ajax({url:"https://api.lwl12.com/hitokoto/main/get", async:false});
-  // $(".searchbar_input").attr("placeholder", aword.responseText);
-
-  // Weather
-  // var cityid = 101020100;
-  // var cityid = Store.getCookie('cityid');
-  var weather=$.ajax({url:"https://widget-v3.seniverse.com/api/weather/6038b355-7b0f-4b05-b53b-f93503f4e003?unit=c&language=en&location=WX4FBXXFKE4F&geolocation=true&detected=zh-cn", async:false});
-
-  var weatherJson = JSON.parse(weather.responseText);
-
-  var weather = new Array();
-  var temp = new Array();
-  weather[0] = weatherJson.weatherinfo.weather1;
-  weather[1] = weatherJson.weatherinfo.weather2;
-  weather[2] = weatherJson.weatherinfo.weather3;
-  weather[3] = weatherJson.weatherinfo.weather4;
-  weather[4] = weatherJson.weatherinfo.weather5;
-  temp[0] = weatherJson.weatherinfo.temp1;
-  temp[1] = weatherJson.weatherinfo.temp2;
-  temp[2] = weatherJson.weatherinfo.temp3;
-  temp[3] = weatherJson.weatherinfo.temp4;
-  temp[4] = weatherJson.weatherinfo.temp5;
-
-  $(".now_city_edit").html(weatherJson.weatherinfo.city);
-  $(".now_city").html(weatherJson.weatherinfo.city);
-  $(".now_temp").html(weatherJson.weatherinfo.temp1);
-
-  for (var i=0; i<5; i++){
-      $(".weather_list-date").eq(i).html(getDate(i));
-      $(".weather_list-weather").eq(i).html(weather[i]);
-      $(".weather_list-temp").eq(i).html(temp[i]);
-  }
-
-  $( ".search-button" ).click(function() {
-    $( ".searchbar_form" ).submit();
-  });
-})
+// $(document).ready(function() {
+//   $(".setCity").click(function(){
+//     Store.setCookie("cityid", $(".area").val(), 365);
+//   });
+//   // City select
+//   $.cxSelect.defaults.url = "https://qiniu.viosey.com/cityid.min.json";
+//   $("#cities").cxSelect({
+//     selects : ["province", "city", "area"],
+//     nodata : "none",
+//     jsonName : "name",
+//     jsonValue : "code",
+//     jsonSub : "sublist"
+//   });
+//
+//   // Time
+//   function getDate(addDayCount) {
+//       var dd = new Date();
+//       dd.setDate(dd.getDate()+addDayCount);// 获取 AddDayCount 天后的日期
+//       var y = dd.getFullYear();
+//       var m = dd.getMonth()+1;// 获取当前月份的日期
+//       var d = dd.getDate();
+//       return y + '/' + (m<10 ? "0" + m : m)+ '/' + (d<10 ? "0"+ d : d);
+//   }
+//
+//   // 一言
+//   // var aword=$.ajax({url:"https://api.lwl12.com/hitokoto/main/get", async:false});
+//   // $(".searchbar_input").attr("placeholder", aword.responseText);
+//
+//   // Weather
+//   var cityid = 101020100;
+//   // var cityid = Store.getCookie('cityid');
+//   var weather=$.ajax({url:"https://widget-v3.seniverse.com/api/weather/6038b355-7b0f-4b05-b53b-f93503f4e003?unit=c&language=en&location=WX4FBXXFKE4F&geolocation=true&detected=zh-cn", async:false});
+//
+//   var weatherJson = JSON.parse(weather.responseText);
+//
+//   var weather = new Array();
+//   var temp = new Array();
+//   weather[0] = weatherJson.weatherinfo.weather1;
+//   weather[1] = weatherJson.weatherinfo.weather2;
+//   weather[2] = weatherJson.weatherinfo.weather3;
+//   weather[3] = weatherJson.weatherinfo.weather4;
+//   weather[4] = weatherJson.weatherinfo.weather5;
+//   temp[0] = weatherJson.weatherinfo.temp1;
+//   temp[1] = weatherJson.weatherinfo.temp2;
+//   temp[2] = weatherJson.weatherinfo.temp3;
+//   temp[3] = weatherJson.weatherinfo.temp4;
+//   temp[4] = weatherJson.weatherinfo.temp5;
+//
+//   $(".now_city_edit").html(weatherJson.weatherinfo.city);
+//   $(".now_city").html(weatherJson.weatherinfo.city);
+//   $(".now_temp").html(weatherJson.weatherinfo.temp1);
+//
+//   for (var i=0; i<5; i++){
+//       $(".weather_list-date").eq(i).html(getDate(i));
+//       $(".weather_list-weather").eq(i).html(weather[i]);
+//       $(".weather_list-temp").eq(i).html(temp[i]);
+//   }
+//
+//   $( ".search-button" ).click(function() {
+//     $( ".searchbar_form" ).submit();
+//   });
+// })
 
 // init first visit
 if (!Store.getCookie('visited')) {
