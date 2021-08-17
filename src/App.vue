@@ -381,7 +381,7 @@ if (!Store.getCookie('visited')) {
       {
         "url": "https://silently9527.cn/",
         "title": "Silently9527",
-        "icon": require('./assets/img/icons/betajava.jpg')
+        "icon": require('./assets/img/icons/silently9527.png')
       },
       {
   			"url": "https://www.v2ex.com/#",
@@ -406,12 +406,12 @@ if (!Store.getCookie('visited')) {
       {
   			"url": "https://leetcode-cn.com/",
   			"title": "Leetcode",
-  			"icon": require('./assets/img/icons/leetcode.svg')
+  			"icon": require('./assets/img/icons/leetcode.png')
   		},
       {
   			"url": "https://www.csdn.net/",
   			"title": "CSDN",
-  			"icon": require('./assets/img/icons/csdn.svg')
+  			"icon": require('./assets/img/icons/csdn.png')
   		}, {
         "url": "http://stackoverflow.com/",
         "title": "Stack Overflow",
@@ -423,7 +423,7 @@ if (!Store.getCookie('visited')) {
       }, {
         "url": "https://www.jianshu.com/",
         "title": "简书",
-        "icon": require('./assets/img/icons/jianshu.jpg')
+        "icon": require('./assets/img/icons/jianshu.png')
       }, {
         "url": "http://douban.com/",
         "title": "豆瓣",
