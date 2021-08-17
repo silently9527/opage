@@ -346,36 +346,92 @@ $(document).ready(function() {
 
 // init first visit
 if (!Store.getCookie('visited')) {
-  if(Store.fetch_site().length == 0){
+  if(Store.fetch_site().length === 0){
     Store.save_site([
+      {
+  			"url": "https://www.aliyun.com/?source=5176.11533457&userCode=",
+  			"title": "阿里云",
+  			"icon": require('./assets/img/icons/aliyun.png')
+  		},
+      {
+  			"url": "https://curl.qcloud.com/Uiq2a7JY",
+  			"title": "腾讯云",
+  			"icon": require('./assets/img/icons/tengxyun.png')
+  		},
+      {
+  			"url": "https://activity.huaweicloud.com/828_promotion/index.html?fromacct=18681cec-8026-4cde-95cf-166f63493040&utm_source=aHdfMDA4NjE4MzgwNDgzNjg4XzAx=&utm_medium=cps&utm_campaign=201905",
+  			"title": "华为云",
+  			"icon": require('./assets/img/icons/huaweiyun.png')
+  		},
+      {
+  			"url": "https://s.qiniu.com/RJraE3",
+  			"title": "七牛云",
+  			"icon": require('./assets/img/icons/qiniuyun.svg')
+  		},
       {
   			"url": "https://github.com/",
   			"title": "Github",
   			"icon": require('./assets/img/icons/github.svg')
+  		},
+      {
+  			"url": "https://gitee.com/",
+  			"title": "Gitee",
+  			"icon": require('./assets/img/icons/gitee.svg')
+  		},
+      {
+        "url": "https://silently9527.cn/",
+        "title": "Silently9527",
+        "icon": require('./assets/img/icons/betajava.jpg')
+      },
+      {
+  			"url": "https://www.v2ex.com/#",
+  			"title": "v2ex",
+  			"icon": require('./assets/img/icons/v2ex.png')
+  		},
+      {
+  			"url": "https://juejin.cn/",
+  			"title": "掘金",
+  			"icon": require('./assets/img/icons/juejin.png')
+  		},
+      {
+  			"url": "https://segmentfault.com/",
+  			"title": "思否",
+  			"icon": require('./assets/img/icons/segmentfault.png')
+  		},
+      {
+  			"url": "https://www.infoq.cn/",
+  			"title": "InfoQ",
+  			"icon": require('./assets/img/icons/infoq.png')
+  		},
+      {
+  			"url": "https://leetcode-cn.com/",
+  			"title": "Leetcode",
+  			"icon": require('./assets/img/icons/leetcode.svg')
+  		},
+      {
+  			"url": "https://www.csdn.net/",
+  			"title": "CSDN",
+  			"icon": require('./assets/img/icons/csdn.svg')
   		}, {
-  			"url": "https://store.steampowered.com",
-  			"title": "Steam",
-  			"icon": require('./assets/img/icons/steam.svg')
-  		}, {
+        "url": "http://stackoverflow.com/",
+        "title": "Stack Overflow",
+        "icon": require('./assets/img/icons/stackoverflow.svg')
+      }, {
+        "url": "https://zhihu.com/",
+        "title": "知乎",
+        "icon": require('./assets/img/icons/zhihu.svg')
+      }, {
+        "url": "https://www.jianshu.com/",
+        "title": "简书",
+        "icon": require('./assets/img/icons/jianshu.jpg')
+      }, {
+        "url": "http://douban.com/",
+        "title": "豆瓣",
+        "icon": require('./assets/img/icons/douban.svg')
+      }, {
   			"url": "https://www.wikipedia.org/",
   			"title": "Wikipedia",
   			"icon": require('./assets/img/icons/wikipedia.svg')
-  		}, {
-  			"url": "https://www.reddit.com/",
-  			"title": "Reddit",
-  			"icon": require('./assets/img/icons/reddit.svg')
-  		}, {
-  			"url": "https://www.flickr.com/",
-  			"title": "Flickr",
-  			"icon": require('./assets/img/icons/flickr.svg')
-  		}, {
-  			"url": "https://500px.com/",
-  			"title": "500px",
-  			"icon": require('./assets/img/icons/500.svg')
-  		}, {
-  			"url": "http://digg.com/",
-  			"title": "Digg",
-  			"icon": require('./assets/img/icons/digg.svg')
   		}, {
   			"url": "https://tumblr.com/",
   			"title": "Tumblr",
@@ -389,46 +445,6 @@ if (!Store.getCookie('visited')) {
   			"title": "Twitter",
   			"icon": require('./assets/img/icons/twitter.svg')
   		}, {
-  			"url": "https://zhihu.com/",
-  			"title": "知乎",
-  			"icon": require('./assets/img/icons/zhihu.svg')
-  		}, {
-  			"url": "https://www.dropbox.com/",
-  			"title": "Dropbox",
-  			"icon": require('./assets/img/icons/dropbox.svg')
-  		}, {
-  			"url": "https://www.behance.net/",
-  			"title": "Behance",
-  			"icon": require('./assets/img/icons/behance.svg')
-  		}, {
-  			"url": "https://plus.google.com/",
-  			"title": "Google+",
-  			"icon": require('./assets/img/icons/google_plus.svg')
-  		}, {
-  			"url": "https://quora.com/",
-  			"title": "Quora",
-  			"icon": require('./assets/img/icons/quora.svg')
-  		}, {
-  			"url": "https://www.pinterest.com/",
-  			"title": "Pinterest",
-  			"icon": require('./assets/img/icons/pinterest.svg')
-  		}, {
-  			"url": "https://getpocket.com/",
-  			"title": "Pocket",
-  			"icon": require('./assets/img/icons/pocket.svg')
-  		}, {
-  			"url": "https://dribbble.com/",
-  			"title": "Dribbble",
-  			"icon": require('./assets/img/icons/dribbble.svg')
-  		}, {
-  			"url": "http://stackoverflow.com/",
-  			"title": "Stack Overflow",
-  			"icon": require('./assets/img/icons/stackoverflow.svg')
-  		}, {
-  			"url": "https://www.amazon.com/",
-  			"title": "Amazon",
-  			"icon": require('./assets/img/icons/amazon.svg')
-  		}, {
   			"url": "https://taobao.com/",
   			"title": "淘宝",
   			"icon": require('./assets/img/icons/taobao.svg')
@@ -437,25 +453,14 @@ if (!Store.getCookie('visited')) {
   			"title": "微博",
   			"icon": require('./assets/img/icons/weibo.svg')
   		}, {
-  			"url": "http://coolapk.com/",
-  			"title": "酷安",
-  			"icon": require('./assets/img/icons/coolapk.svg')
-  		}, {
-  			"url": "http://douban.com/",
-  			"title": "豆瓣",
-  			"icon": require('./assets/img/icons/douban.svg')
+  			"url": "https://translate.google.cn/",
+  			"title": "Google翻译",
+  			"icon": require('./assets/img/icons/googlefanyi.svg')
   		}
   	])
   }
   if(Store.fetch_todo().length == 0){
     Store.save_todo([
-  		{
-  			"label": "1. Search",
-  			"isFinished": false
-  		}, {
-        "label": "2. Add your own TODO",
-  			"isFinished": false
-  		}
   	])
   }
 
